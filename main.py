@@ -10,7 +10,7 @@ import modules
 # -------------------#
 
 current_bomb = Bomb(
-	"ABCDEF", # serial number
+	"ABCDE2", # serial number
 	lit_indicators=["NSA"],
 	unlit_indicators=[],
 	batteries=2,
@@ -29,4 +29,4 @@ current_bomb = Bomb(
 # -------------------#
 # SOLVING MODULES    #
 # -------------------#
-modules.button.solve_button(current_bomb, "why", "red")
+modules.complicatedwires.solve_complicated_wires(current_bomb, ['RBSL', 'RB', 'RBS', 'SL'])

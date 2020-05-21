@@ -3,6 +3,7 @@ from termcolor import cprint
 
 
 def solve_button(bomb: Bomb, word: str, color: str):
+	cprint('The Button', 'yellow', attrs=['reverse'])
 	# Preprocessing
 	word = word.upper()
 	color = color.upper()
