@@ -3,7 +3,7 @@ from termcolor import cprint
 
 
 # Format: RBSL (letters)
-def solve_complicated_wires(bomb: Bomb, wires: list):
+def solve(bomb: Bomb, wires: list):
 	cprint('Complicated Wires', 'yellow', attrs=['reverse'])
 	cprint('Green: Cut', 'green')
 	cprint('Red: Do not cut', 'red')
@@ -26,11 +26,11 @@ def solve_complicated_wires(bomb: Bomb, wires: list):
 			cut = True
 
 		elif cur_wire_str in ['R', 'B', 'RB', 'RBL']:
-			if bomb.last_digit_serial() % 2 == 0:
+			if bomb.serial_last_digit() % 2 == 0:
 				cut = True
 
 		elif cur_wire_str in ['BL', 'BSL', 'RBS']:
-			if 'PARALLEL' in bomb.get_ports_flattened():
+			if 'PARALLEL' in bomb.get_all_ports():
 				cut = True
 
 		elif cur_wire_str in ['RL', 'RSL', 'SL']:

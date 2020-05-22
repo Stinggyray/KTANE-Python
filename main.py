@@ -10,15 +10,15 @@ import modules
 # -------------------#
 
 current_bomb = Bomb(
-	"ABCDE2", # serial number
-	lit_indicators=["NSA"],
+	'ABCDE2', # serial number
+	lit_indicators=['NSA'],
 	unlit_indicators=[],
 	batteries=2,
 	holders=1,
 
 	ports=[
 		[],
-		["RJ", "RCA"]
+		['RJ', 'RCA']
 	],
 
 	module_count=15,
@@ -29,4 +29,4 @@ current_bomb = Bomb(
 # -------------------#
 # SOLVING MODULES    #
 # -------------------#
-modules.complicatedwires.solve_complicated_wires(current_bomb, ['RBSL', 'RB', 'RBS', 'SL'])
+modules.caesarcipher.solve(current_bomb, 'ASDFE')

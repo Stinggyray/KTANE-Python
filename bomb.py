@@ -28,15 +28,18 @@ class Bomb:
 		self.aa_batteries = (batteries - holders) * 2
 		self.d_batteries = batteries - self.aa_batteries
 
-	def last_digit_serial(self):
+	def serial_last_digit(self):
 		return int(re.match('.+([0-9])[^0-9]*$', self.serial_number).group(1))
 
 	def serial_has_vowel(self):
 		pattern = re.compile("[AEIOU]")
 		return bool(pattern.search(self.serial_number))
 
-	def get_ports_flattened(self):
+	def get_all_ports(self):
 		return [item for sublist in self.ports for item in sublist]
+
+	def get_all_indicators(self):
+		return self.lit_indicators + self.unlit_indicators
 
 
 def capitalize_list(old_list: list):
