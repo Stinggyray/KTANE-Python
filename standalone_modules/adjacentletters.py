@@ -1,37 +1,40 @@
+from termcolor import cprint
+
+
 # All the adjacent letters in KTANE.
 arrays = {
-	"A": ["GJMOY", "HKPRW"],
-	"B": ["IKLRT", "CDFYZ"],
-	"C": ["BHIJW", "DEMTU"],
-	"D": ["IKOPQ", "CJTUW"],
-	"E": ["ACGIJ", "KSUWZ"],
-	"F": ["CERVY", "AGJPQ"],
-	"G": ["ACFNS", "HOQYZ"],
-	"H": ["LRTUX", "DKMPS"],
-	"I": ["DLOWZ", "EFNUV"],
-	"J": ["BQTUW", "EHIOS"],
-	"K": ["AFPXY", "DIORZ"],
-	"L": ["GKPTZ", "ABRVX"],
-	"M": ["EILQT", "BFPWX"],
-	"N": ["PQRSV", "AFGHL"],
-	"O": ["HJLUZ", "IQSTX"],
-	"P": ["DMNOX", "CFHKR"],
-	"Q": ["CEOPV", "BDIKN"],
-	"R": ["AEGSU", "BNOXY"],
-	"S": ["ABEKQ", "GMVYZ"],
-	"T": ["GVXYZ", "CJLSU"],
-	"U": ["FMVXZ", "BILNY"],
-	"V": ["DHMNW", "AEJQX"],
-	"W": ["DFHMN", "GLQRT"],
-	"X": ["BDFKW", "AJNOV"],
-	"Y": ["BCHSU", "EGMTW"],
-	"Z": ["JNRSY", "CLMPV"],
+	'A': ['GJMOY', 'HKPRW'],
+	'B': ['IKLRT', 'CDFYZ'],
+	'C': ['BHIJW', 'DEMTU'],
+	'D': ['IKOPQ', 'CJTUW'],
+	'E': ['ACGIJ', 'KSUWZ'],
+	'F': ['CERVY', 'AGJPQ'],
+	'G': ['ACFNS', 'HOQYZ'],
+	'H': ['LRTUX', 'DKMPS'],
+	'I': ['DLOWZ', 'EFNUV'],
+	'J': ['BQTUW', 'EHIOS'],
+	'K': ['AFPXY', 'DIORZ'],
+	'L': ['GKPTZ', 'ABRVX'],
+	'M': ['EILQT', 'BFPWX'],
+	'N': ['PQRSV', 'AFGHL'],
+	'O': ['HJLUZ', 'IQSTX'],
+	'P': ['DMNOX', 'CFHKR'],
+	'Q': ['CEOPV', 'BDIKN'],
+	'R': ['AEGSU', 'BNOXY'],
+	'S': ['ABEKQ', 'GMVYZ'],
+	'T': ['GVXYZ', 'CJLSU'],
+	'U': ['FMVXZ', 'BILNY'],
+	'V': ['DHMNW', 'AEJQX'],
+	'W': ['DFHMN', 'GLQRT'],
+	'X': ['BDFKW', 'AJNOV'],
+	'Y': ['BCHSU', 'EGMTW'],
+	'Z': ['JNRSY', 'CLMPV'],
 }
 
 
 def calc_letters(letterlist):
 	if None in letterlist:
-		print("Invalid arguments. Please try again.")
+		print('Invalid arguments. Please try again.')
 		return
 
 	for i in range(3):
@@ -49,7 +52,7 @@ def calc_letters(letterlist):
 					works = True
 					break
 
-			print(letterlist[i][j] if works else ".", end="")
+			print(letterlist[i][j] if works else '.', end='')
 		print()
 
 
@@ -57,21 +60,22 @@ def get_input_row():
 	row = input()
 
 	if len(row) != 4:
-		print("Invalid argument. Please enter that again.")
+		print('Invalid argument. Please enter that again.')
 		return get_input_row()
 
 	return list(row.upper())
 
 
-print("Input your buttons in this format:")
-print("""ABCD
+cprint('Adjacent Letters', 'yellow', attrs=['reverse'])
+cprint('Input your buttons in this format:', 'green')
+print('''ABCD
 EFGH
 IJKL
-""")
+''')
 
 letters = [get_input_row(), get_input_row(), get_input_row()]
 
-print("Your input:")
+print('Your input:')
 print(letters)
 print()
 print('Buttons to press:')
