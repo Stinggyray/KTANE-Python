@@ -32,6 +32,24 @@ arrays = {
 }
 
 
+def solve():
+	cprint('Adjacent Letters', 'yellow', attrs=['reverse'])
+	cprint('Input your buttons in this format:', 'green')
+	print('''ABCD
+EFGH
+IJKL
+	''')
+
+	letters = [get_input_row(), get_input_row(), get_input_row()]
+
+	print('Your input:')
+	print(letters)
+	print()
+	print('Buttons to press:')
+
+	calc_letters(letters)
+
+
 def calc_letters(letterlist):
 	if None in letterlist:
 		print('Invalid arguments. Please try again.')
@@ -66,18 +84,5 @@ def get_input_row():
 	return list(row.upper())
 
 
-cprint('Adjacent Letters', 'yellow', attrs=['reverse'])
-cprint('Input your buttons in this format:', 'green')
-print('''ABCD
-EFGH
-IJKL
-''')
-
-letters = [get_input_row(), get_input_row(), get_input_row()]
-
-print('Your input:')
-print(letters)
-print()
-print('Buttons to press:')
-
-calc_letters(letters)
+if __name__ == '__main__':
+	solve()

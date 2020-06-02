@@ -6,7 +6,7 @@ Perhaps I'll discover that I can actually program. Or maybe I can't. I don't kno
 
 The `standalone_modules` folder is for modules that stand on their own. They do not require any sort of edgework,
 it's just calculations based on given values. All of these files are desigend to run on their own - none of them need
-to be supplied anything. Just run them and they will solve the module for you.
+to be supplied anything. Just run them and they will solve the module for you. Alternatively, the cmd_main.py file should also be able to run them.
 
 The `modules` folder all require a Bomb object to be passed to them, meaning they require edgework.
 They shouldn't be excruciating to solve.

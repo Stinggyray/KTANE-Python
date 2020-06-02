@@ -10,23 +10,22 @@ import modules
 # -------------------#
 
 current_bomb = Bomb(
-	'ABCDE2', # serial number
-	lit_indicators=['NSA'],
-	unlit_indicators=[],
-	batteries=2,
-	holders=1,
+	'EJ4PA3', # serial number
+	lit_indicators=['CLR'],
+	unlit_indicators=['IND'],
+	batteries=5,
+	holders=3,
 
 	ports=[
-		[],
-		['RJ', 'RCA']
+
 	],
 
-	module_count=15,
-	time=20
+	module_count=5,
+	time=60
 )
 
 
 # -------------------#
 # SOLVING MODULES    #
 # -------------------#
-modules.caesarcipher.solve(current_bomb, 'ASDFE')
+modules.button.solve(current_bomb, 'red', 'hold')
