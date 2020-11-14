@@ -10,11 +10,11 @@ import modules
 # -------------------#
 
 current_bomb = Bomb(
-	'EJ4PA3', # serial number
-	lit_indicators=['CLR'],
-	unlit_indicators=['IND'],
-	batteries=5,
-	holders=3,
+	'W16QA5', # serial number
+	lit_indicators=[],
+	unlit_indicators=['BOB'],
+	batteries=3,
+	holders=2,
 
 	ports=[
 
