@@ -13,5 +13,5 @@ These wires are read/ordered going from left to right.
 - Else: Connect to Missing 60
 
 ## Blue Wire
-- Wire #4 missing 22/50/60: Connect to Missing 20
+- Wire #4 missing 22/50/60: Connect to Missing 22
 - Else: Connect to Missing 60
